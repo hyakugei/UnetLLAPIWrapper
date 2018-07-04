@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Networking;
+﻿using UnityEngine.Networking;
 
 namespace LowLevelNetworking
 {
