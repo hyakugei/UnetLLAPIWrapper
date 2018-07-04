@@ -1,6 +1,6 @@
 # Unet LLAPI Wrapper
 
-This is a small wrapper for the Low Level API functionality in the Unet release for Unity3D 5.1
+This is a small wrapper for the Low Level API functionality in the Unet release for Unity3D 5.6.x
 
 Usage
 
