@@ -12,8 +12,6 @@ Just drop the Net folder into your project and make the calls required as shown 
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
 
 public class NetworkTest : MonoBehaviour {
 	
@@ -31,14 +29,14 @@ public class NetworkTest : MonoBehaviour {
 		mClient.Connect( "127.0.0.1" , 7777 );
 
 		// Server Event Callbacks
-		NetManager.OnServerConnection = ServerConnection;
-		NetManager.OnServerData = ServerData;
-		NetManager.OnServerDisconnect = ServerDisconnect;
+		mServer.OnConnection = ServerConnection;
+		mServer.OnData = ServerData;
+		mServer.OnDisconnection = ServerDisconnect;
 
 		// Client Event Callbacks
-		NetManager.OnClientConnection = ClientConnection;
-		NetManager.OnClientData = ClientData;
-		NetManager.OnClientDisconnect = ClientDisconnect;
+		mClient.OnConnection = ClientConnection;
+		mClient.OnData = ClientData;
+		mClient.OnDisconnection = ClientDisconnect;
 		
 	}
 
