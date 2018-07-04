@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using LowLevelNetworking;
+
 
 namespace LowLevelNetworking
 {
@@ -10,7 +10,7 @@ namespace LowLevelNetworking
 	public delegate void NetMessageHandler(NetworkEventType net, int connectionId, int channelId, byte[] buffer, int dataSize);
 	public delegate void NetEventHandler(int connectionId, int channelId, byte[] buffer, int dataSize);
 
-	public class NetHost
+	public abstract class NetHost
 	{
 		
 		public int mSocket = -1;
