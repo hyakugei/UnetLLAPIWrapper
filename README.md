@@ -87,3 +87,7 @@ namespace LowLevelNetworking
 
 ```
 
+Notes
+
+* If you don't use the above example, remember that you need to call `NetManager.PollEvents()` every frame. 
+* For clients, if you want a client to destroy/disconnect itself, you may need to wait a frame from calling the disconnect method before `Destroy()`ing the client object itself. 
